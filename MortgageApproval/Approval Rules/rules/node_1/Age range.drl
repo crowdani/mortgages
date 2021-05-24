@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Age range</name>
+  <uuid>10d20f3e-5c6c-44c6-93b8-a6fb7a510ef8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the age of theCustomer is less than 21 or the age of theCustomer is more than 75
+then
+    add "Acceptable age range is currenly 21-75" to the messages of decision;
+    add "Customer age = "+the age of theCustomer to the messages of decision;
+	set the overallResult of decision to "Customer is outside the acceptable age range for a mortgage" ;
+	decision does not get approved ; 
+     ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

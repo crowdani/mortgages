@@ -1,0 +1,8 @@
+{
+  "theCustomer": {
+    "age": 21
+  },
+  "theApplication": {
+    "loanAmount": 15000
+  }
+}

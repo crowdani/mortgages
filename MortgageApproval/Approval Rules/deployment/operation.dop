@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Approval Rules">
+  <name>approvalRules</name>
+  <uuid>78142dce-7def-494c-a633-6954478584da</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#14445c18-67fd-4260-be21-739eb80ea48b"/>
+  <targetRuleProject href="../../Approval%20Rules#9f2a3998-fae3-4280-af82-f30e77c74c84"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

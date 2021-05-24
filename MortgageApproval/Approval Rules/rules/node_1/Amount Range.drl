@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Amount Range</name>
+  <uuid>879313cb-013c-4b18-9e87-d138d8e391cc</uuid>
+  <documentation><![CDATA[ is less than 21 or the age of theCustomer is more than 75
+
+if
+	the 
+then
+    add "Acceptable age range is currenly 21-75" to the messages of decision;
+	set the overallResult of decision to "Customer is outside the acceptable age range for a mortgage" ;
+	decision does not get approved ; ]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the loanAmount of theApplication is less than 5,000 
+    or the loanAmount of theApplication is more than 1,500,000
+then
+    add "Acceptable loan range is currenly £5k to £1.5m" to the messages of decision;
+    add "Requested amount was £"+the loanAmount of theApplication to the messages of decision;
+	set the overallResult of decision to "Loan amount is outside the acceptable range for a mortgage" ;
+	decision does not get approved ; 
+     ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

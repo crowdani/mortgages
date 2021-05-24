@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>14445c18-67fd-4260-be21-739eb80ea48b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="theCustomer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Customer" collection="false" name="theCustomer"/>
+                <rule defaultRule="true" href="node_0/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="theCustomer" typeRef="Customer"/>
+    </inputData>
+    <decision id="node_1" name="Mortgage Approval Rules">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="theCustomer"/>
+                <input bomType="Application" collection="false" name="theApplication"/>
+                <output bomType="ApprovalDecision" collection="false" name="Mortgage Approval Rules"/>
+                <rule defaultRule="true" href="node_1/Output%20defaults.drl" kind="BusinessRule" name="Output defaults"/>
+                <rule defaultRule="false" href="node_1/Age%20range.drl" kind="BusinessRule" name="Age range"/>
+                <rule defaultRule="false" href="node_1/Amount%20Range.drl" kind="BusinessRule" name="Amount Range"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Mortgage Approval Rules" typeRef="ApprovalDecision"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="theApplication">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Application" collection="false" name="theApplication"/>
+                <rule defaultRule="true" href="node_2/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="theApplication" typeRef="Application"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

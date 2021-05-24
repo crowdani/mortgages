@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>f1527c08-af41-41f3-876e-3727e20de704</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set theCustomer to a new Customer where
+		the DOB is 5/1/2000 , 
+		the addresseses are an empty list of Addresses , 
+		the age is 21, 
+		the firstName is "Fred", 
+		the lastName is "Smythe", 
+		the referees are an empty list of strings , 
+		the requestDate is 5/10/2021 , 
+		the requestType is "Fixed100", 
+		the title is "Mr" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

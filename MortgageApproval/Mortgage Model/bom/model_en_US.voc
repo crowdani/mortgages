@@ -1,0 +1,95 @@
+
+# Term: messages
+@messages#plural = messages
+
+# Term: referees
+@referees#plural = referees
+
+# Address
+Address#concept.label = Address
+Address.Address(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Address} where {0, country} {1, county} {2, line1} {3, line2} {4, line3} {5, numberName} {6, postcode} {7, town}
+Address.country#phrase.action = set the country of {this} to {country}
+Address.country#phrase.navigation = {country} of {this}
+Address.county#phrase.action = set the county of {this} to {county}
+Address.county#phrase.navigation = {county} of {this}
+Address.line1#phrase.action = set the line1 of {this} to {line1}
+Address.line1#phrase.navigation = {line1} of {this}
+Address.line2#phrase.action = set the line2 of {this} to {line2}
+Address.line2#phrase.navigation = {line2} of {this}
+Address.line3#phrase.action = set the line3 of {this} to {line3}
+Address.line3#phrase.navigation = {line3} of {this}
+Address.numberName#phrase.action = set the numberName of {this} to {numberName}
+Address.numberName#phrase.navigation = {numberName} of {this}
+Address.postcode#phrase.action = set the postcode of {this} to {postcode}
+Address.postcode#phrase.navigation = {postcode} of {this}
+Address.town#phrase.action = set the town of {this} to {town}
+Address.town#phrase.navigation = {town} of {this}
+
+# Application
+Application#concept.label = Application
+Application.Application(java.lang.String,double,double,java.lang.String,double)#phrase.navigation = a new {Application} where {0, ID} {1, loanAmount} {2, loanToValuePercentage} {3, mortgageType} {4, propertyValue}
+Application.ID#phrase.action = set the ID of {this} to {ID}
+Application.ID#phrase.navigation = {ID} of {this}
+Application.loanAmount#phrase.action = set the loanAmount of {this} to {loanAmount}
+Application.loanAmount#phrase.addition_setter = add {loanAmount} to the loanAmount of {this}
+Application.loanAmount#phrase.navigation = {loanAmount} of {this}
+Application.loanAmount#phrase.subtraction_setter = subtract {loanAmount} from the loanAmount of {this}
+Application.loanToValuePercentage#phrase.action = set the loanToValuePercentage of {this} to {loanToValuePercentage}
+Application.loanToValuePercentage#phrase.addition_setter = add {loanToValuePercentage} to the loanToValuePercentage of {this}
+Application.loanToValuePercentage#phrase.navigation = {loanToValuePercentage} of {this}
+Application.loanToValuePercentage#phrase.subtraction_setter = subtract {loanToValuePercentage} from the loanToValuePercentage of {this}
+Application.mortgageType#phrase.action = set the mortgageType of {this} to {mortgageType}
+Application.mortgageType#phrase.navigation = {mortgageType} of {this}
+Application.propertyValue#phrase.action = set the propertyValue of {this} to {propertyValue}
+Application.propertyValue#phrase.addition_setter = add {propertyValue} to the propertyValue of {this}
+Application.propertyValue#phrase.navigation = {propertyValue} of {this}
+Application.propertyValue#phrase.subtraction_setter = subtract {propertyValue} from the propertyValue of {this}
+
+# ApprovalDecision
+ApprovalDecision#concept.label = ApprovalDecision
+ApprovalDecision.ApprovalDecision(boolean,java.util.List,java.lang.String)#phrase.navigation = a new {ApprovalDecision} where {0, approved} {1, messages} {2, overallResult}
+ApprovalDecision.addTo_messages(java.lang.String)#phrase.action = add {0} to the messages of {this}
+ApprovalDecision.approved#phrase.action[0] = {this} gets approved only if {approved}
+ApprovalDecision.approved#phrase.action[1] = make it {approved} that {this} is approved
+ApprovalDecision.approved#phrase.action[1].deprecated = true
+ApprovalDecision.approved#phrase.navigation = {this} is approved
+ApprovalDecision.approved#phrase.negative_predicate = {this} is not approved
+ApprovalDecision.approved#phrase.negative_predicate_setter = {this} does not get approved
+ApprovalDecision.approved#phrase.positive_predicate_setter = {this} gets approved
+ApprovalDecision.clear_messages()#phrase.action = clear the messages of {this}
+ApprovalDecision.messages#phrase.action = set the messages of {this} to {messages}
+ApprovalDecision.messages#phrase.navigation = {messages} of {this}
+ApprovalDecision.overallResult#phrase.action = set the overallResult of {this} to {overallResult}
+ApprovalDecision.overallResult#phrase.navigation = {overallResult} of {this}
+ApprovalDecision.removeFrom_messages(java.lang.String)#phrase.action = remove {0} from the messages of {this}
+
+# Customer
+Customer#concept.documentation = 
+Customer#concept.label = Customer
+Customer.Customer(ilog.rules.brl.SimpleDate,java.util.List,java.lang.Long,java.lang.String,java.lang.String,java.util.List,ilog.rules.brl.SimpleDate,java.lang.String,java.lang.String)#phrase.navigation = a new {Customer} where {0, DOB} {1, addresses} {2, age} {3, firstName} {4, lastName} {5, referees} {6, requestDate} {7, requestType} {8, title}
+Customer.DOB#phrase.action = set the DOB of {this} to {DOB}
+Customer.DOB#phrase.navigation = {DOB} of {this}
+Customer.addTo_addresseses(Address)#phrase.action = add {0} to the addresseses of {this}
+Customer.addTo_referees(java.lang.String)#phrase.action = add {0} to the referees of {this}
+Customer.addresseses#phrase.action = set the addresseses of {this} to {addresses}
+Customer.addresseses#phrase.navigation = {addresses} of {this}
+Customer.age#phrase.action = set the age of {this} to {age}
+Customer.age#phrase.addition_setter = add {age} to the age of {this}
+Customer.age#phrase.navigation = {age} of {this}
+Customer.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+Customer.clear_addresseses()#phrase.action = clear the addresseses of {this}
+Customer.clear_referees()#phrase.action = clear the referees of {this}
+Customer.firstName#phrase.action = set the firstName of {this} to {firstName}
+Customer.firstName#phrase.navigation = {firstName} of {this}
+Customer.lastName#phrase.action = set the lastName of {this} to {lastName}
+Customer.lastName#phrase.navigation = {lastName} of {this}
+Customer.referees#phrase.action = set the referees of {this} to {referees}
+Customer.referees#phrase.navigation = {referees} of {this}
+Customer.removeFrom_addresseses(Address)#phrase.action = remove {0} from the addresseses of {this}
+Customer.removeFrom_referees(java.lang.String)#phrase.action = remove {0} from the referees of {this}
+Customer.requestDate#phrase.action = set the requestDate of {this} to {requestDate}
+Customer.requestDate#phrase.navigation = {requestDate} of {this}
+Customer.requestType#phrase.action = set the requestType of {this} to {requestType}
+Customer.requestType#phrase.navigation = {requestType} of {this}
+Customer.title#phrase.action = set the title of {this} to {title}
+Customer.title#phrase.navigation = {title} of {this}

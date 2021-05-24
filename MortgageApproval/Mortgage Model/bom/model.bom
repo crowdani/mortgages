@@ -1,0 +1,204 @@
+
+
+public class Address
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Address"
+        property "de.generated" "true"
+{
+    public string country
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "country"
+                property update "true";
+    public string county
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "county"
+                property update "true";
+    public string line1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "line1"
+                property update "true";
+    public string line2
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "line2"
+                property update "true";
+    public string line3
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "line3"
+                property update "true";
+    public string numberName
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "numberName"
+                property update "true";
+    public string postcode
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "postcode"
+                property update "true";
+    public string town
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "town"
+                property update "true";
+    public Address(string country, string county, string line1, string line2, string line3, string numberName, string postcode, string town)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Address()
+                property "dataio.default" "true";
+}
+
+public class Application
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Application"
+        property "de.generated" "true"
+{
+    public string ID
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ID"
+                property update "true";
+    public double loanAmount
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loanAmount"
+                property update "true";
+    public double loanToValuePercentage
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loanToValuePercentage"
+                property update "true";
+    public string mortgageType
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "mortgageType"
+                property update "true";
+    public double propertyValue
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "propertyValue"
+                property update "true";
+    public Application(string ID, double loanAmount, double loanToValuePercentage, string mortgageType, double propertyValue)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Application()
+                property "dataio.default" "true";
+}
+
+public class ApprovalDecision
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "ApprovalDecision"
+        property "de.generated" "true"
+{
+    public boolean approved
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "approved"
+                property update "true";
+    public java.util.List messages domain 0,* class string
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "messages"
+                property update "true";
+    public string overallResult
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "overallResult"
+                property update "true";
+    public ApprovalDecision(boolean approved, 
+        java.util.List messages domain 0,* class string, 
+        string overallResult)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public ApprovalDecision()
+                property "dataio.default" "true";
+    public void addTo_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void clear_messages()
+                property collectionAttribute "messages"
+                property update "true";
+    public void removeFrom_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void set_messages(java.util.Collection messages domain 0,* class string)
+                property collectionAttribute "messages"
+                property update "true";
+}
+
+public class Customer
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Customer"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.SimpleDate DOB
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DOB"
+                property update "true";
+    public java.util.List addresseses domain 0,* class Address
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "addresseses"
+                property update "true";
+    public java.lang.Long age
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public string firstName
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "firstName"
+                property update "true";
+    public string lastName
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lastName"
+                property update "true";
+    public java.util.List referees domain 0,* class string
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "referees"
+                property update "true";
+    public ilog.rules.brl.SimpleDate requestDate
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "requestDate"
+                property update "true";
+    public string requestType
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "requestType"
+                property update "true";
+    public string title
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "title"
+                property update "true";
+    public Customer(ilog.rules.brl.SimpleDate DOB, 
+        java.util.List addresseses domain 0,* class Address, 
+        java.lang.Long age, 
+        string firstName, 
+        string lastName, 
+        java.util.List referees domain 0,* class string, 
+        ilog.rules.brl.SimpleDate requestDate, 
+        string requestType, 
+        string title)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Customer()
+                property "dataio.default" "true";
+    public void addTo_addresseses(Address addresseses)
+                property collectionAttribute "addresseses"
+                property update "true";
+    public void addTo_referees(string referees)
+                property collectionAttribute "referees"
+                property update "true";
+    public void clear_addresseses()
+                property collectionAttribute "addresseses"
+                property update "true";
+    public void clear_referees()
+                property collectionAttribute "referees"
+                property update "true";
+    public void removeFrom_addresseses(Address addresseses)
+                property collectionAttribute "addresseses"
+                property update "true";
+    public void removeFrom_referees(string referees)
+                property collectionAttribute "referees"
+                property update "true";
+    public void set_addresseses(java.util.Collection addresseses domain 0,* class Address)
+                property collectionAttribute "addresseses"
+                property update "true";
+    public void set_referees(java.util.Collection referees domain 0,* class string)
+                property collectionAttribute "referees"
+                property update "true";
+}
+
